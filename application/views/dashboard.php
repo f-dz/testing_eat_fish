@@ -4,15 +4,15 @@
     <div class="row">
         <div class="col-md-4">
             <h5><i class="fa fa-list-alt"></i> Total Stok Barang</h5>
-            <h1>&ensp;<?php echo $total_barang;?></h1>
+            <h1>&ensp;<?= $total_barang;?></h1>
         </div>
         <div class="col-md-4">
             <h5><i class="fa fa-list-alt"></i> Total Stok Ikan</h5>
-            <h1>&ensp;<?php echo $total_ikan;?></h1>
+            <h1>&ensp;<?= $total_ikan;?></h1>
         </div>
         <div class="col-md-4">
             <h5><i class="fa fa-list-alt"></i> Total Stok Produk Olahan</h5>
-            <h1>&ensp;<?php echo $total_produk_olahan;?></h1>
+            <h1>&ensp;<?= $total_produk_olahan;?></h1>
         </div>
     </div>
 
@@ -37,18 +37,18 @@
     function drawChart() {
         var data = google.visualization.arrayToDataTable([
             ['Bulan', 'Jumlah', { role: "style" }],
-            ['Jan', <?php echo $total1;?>, '#d36f7c' ],
-            ['Feb', <?php echo $total2;?>, '#f8b2d8'],
-            ['Maret', <?php echo $total3;?>, '#7a1452'],
-            ['April', <?php echo $total4;?>, '#cca9dd'],
-            ['Mei', <?php echo $total5;?>, '#d36f7c' ],
-            ['Juni', <?php echo $total6;?>, '#009975'],
-            ['Juli', <?php echo $total7;?>, '#9bbaaa'],
-            ['Ags', <?php echo $total8;?>, '#ed8e4a'],
-            ['Sep', <?php echo $total9;?>, '#d36f7c' ],
-            ['Okt', <?php echo $total10;?>, '#787878'],
-            ['Nov', <?php echo $total11;?>, '#009975'],
-            ['Des', <?php echo $total12;?>, '#9bbaaa']
+            ['Jan', <?= $total1;?>, '#d36f7c' ],
+            ['Feb', <?= $total2;?>, '#f8b2d8'],
+            ['Maret', <?= $total3;?>, '#7a1452'],
+            ['April', <?= $total4;?>, '#cca9dd'],
+            ['Mei', <?= $total5;?>, '#d36f7c' ],
+            ['Juni', <?= $total6;?>, '#009975'],
+            ['Juli', <?= $total7;?>, '#9bbaaa'],
+            ['Ags', <?= $total8;?>, '#ed8e4a'],
+            ['Sep', <?= $total9;?>, '#d36f7c' ],
+            ['Okt', <?= $total10;?>, '#787878'],
+            ['Nov', <?= $total11;?>, '#009975'],
+            ['Des', <?= $total12;?>, '#9bbaaa']
 
         ]);
 

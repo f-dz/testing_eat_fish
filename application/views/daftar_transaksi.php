@@ -35,15 +35,15 @@
 									<?php $i=1; ?>
 									<?php foreach ($transaksi as $row) : ?>
 										<tr>
-											<td align="center" style="max-width:30px;"><?php echo $i; ?></td>
-											<td><?php echo htmlspecialchars($row['nama_pembeli']); ?></td>
-											<td>Rp <?php echo htmlspecialchars(number_format($row['total_harga'],2)); ?></td>
-											<td align="center"><?php echo date("H:i:s", strtotime($row['jam']))?></td>
-											<td align="center"><?php echo date("d-m-Y", strtotime($row['tanggal']))?></td>
-                                            <td align="center"><?php echo $row['status'];?>&ensp;
+											<td align="center" style="max-width:30px;"><?= $i; ?></td>
+											<td><?= htmlspecialchars($row['nama_pembeli']); ?></td>
+											<td>Rp <?= htmlspecialchars(number_format($row['total_harga'],2)); ?></td>
+											<td align="center"><?= date("H:i:s", strtotime($row['jam']))?></td>
+											<td align="center"><?= date("d-m-Y", strtotime($row['tanggal']))?></td>
+                                            <td align="center"><?= $row['status'];?>&ensp;
                                                 <?php if ($this->session->userdata('level')=='admin') : 
                                                     if ($row['status']=='Proses') : ?>
-                                                    <a class="btn small btn-success" href="<?php echo base_url('Transaksi/update_status/'.$row['id_transaksi'])?>" title='Update status'>
+                                                    <a class="btn small btn-success" href="<?= base_url('Transaksi/update_status/'.$row['id_transaksi'])?>" title='Update status'>
                                                     <i class="fa fa-upload" style="padding:3px;color:white"></i></a>
                                                 <?php endif; endif;?>
                                             </td>

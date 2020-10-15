@@ -15,13 +15,13 @@
                         <?php $jumlah=0; foreach ($keranjang as $row) :?>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label><?php echo $row['nama_barang'] ?> x<?php echo $row['jumlah'];?></label>
+                                    <label><?= $row['nama_barang'] ?> x<?= $row['jumlah'];?></label>
                                 </div>
                                 <div style="text-align: right;" class="col-md-3">
-                                    <label>Rp <?php echo number_format($row['total_harga'], 2, ",", ".") ?></label>
+                                    <label>Rp <?= number_format($row['total_harga'], 2, ",", ".") ?></label>
                                 </div>
                                 <div class="col-md-1">
-                                    <a class="btn small btn-danger" href="<?php echo base_url('Transaksi/hapus_keranjang/'.$row['id_keranjang'])?>" title='Hapus'>
+                                    <a class="btn small btn-danger" href="<?= base_url('Transaksi/hapus_keranjang/'.$row['id_keranjang'])?>" title='Hapus'>
 									<i class="fa fa-trash" style="color:white"></i></a>
                                 </div>
                             </div>
@@ -36,10 +36,10 @@
                                 <label>Total Harga</label>
                             </div>
                             <div style="text-align: right;" class="col-md-3">
-                                <label>Rp <?php echo number_format($jumlah, 2, ",", ".") ?></label>
+                                <label>Rp <?= number_format($jumlah, 2, ",", ".") ?></label>
                             </div>
                         </div>
-                        <form action="<?php echo base_url('Transaksi/tambah_transaksi/'); ?>" method="post" enctype="multipart/form-data">
+                        <form action="<?= base_url('Transaksi/tambah_transaksi/'); ?>" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-md-4">
@@ -48,18 +48,18 @@
                                     <div style="text-align: right;" class="col-md-6">
                                         <input type="text" name="nama_pembeli" required>
                                     </div>
-                                    <input type="number" name="total_harga" hidden value="<?php echo $jumlah;?>">
+                                    <input type="number" name="total_harga" hidden value="<?= $jumlah;?>">
                                 </div>
                             </div>
                                 <div class="row">
                                     <div style="text-align: center;" class="col-md-10">
-                                        <button type="submit" value="simpan" class="btn btn-primary" href="<?php echo base_url('Transaksi/tambah_transaksi')?>">Order Sekarang</button>                               
+                                        <button type="submit" value="simpan" class="btn btn-primary" href="<?= base_url('Transaksi/tambah_transaksi')?>">Order Sekarang</button>                               
                                     </div>
                                 </div>
                         </form>
                         <div class="row">
                             <div style="text-align: center;" class="col-md-10">
-                                <a class="btn btn-warning" href="<?php echo base_url('Transaksi/reset_keranjang')?>">Reset Keranjang</a>                               
+                                <a class="btn btn-warning" href="<?= base_url('Transaksi/reset_keranjang')?>">Reset Keranjang</a>                               
                             </div>
                         </div>
                     <?php else : ?>
@@ -86,25 +86,25 @@
                             ?>
                             <div style="height:350px;max-width:260px;width:100%;margin:10px;" class="card">
                                 <a>
-                                    <img height="200px" width="258px" src="<?php echo base_url('assets/foto_barang/'.$row['foto']);?>"/>
+                                    <img height="200px" width="258px" src="<?= base_url('assets/foto_barang/'.$row['foto']);?>"/>
                                 </a>
                                 <br>
                                 <div class="container">
                                     <div class="row">
                                         <div class="col">
-                                            <a style="color: orange;">Rp <?php echo number_format($row['harga'], 2, ",", ".")?></a><br>
+                                            <a style="color: orange;">Rp <?= number_format($row['harga'], 2, ",", ".")?></a><br>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div style="text-align: left;" class="col-md">
-                                            <a style="color: black;"><?php echo $row['nama_barang']?></a>
+                                            <a style="color: black;"><?= $row['nama_barang']?></a>
                                         </div>
                                         <div style="text-align: right;" class="col-md">
-                                            <a style="color:black">Stok : <?php echo $row['jumlah'];?></a>
+                                            <a style="color:black">Stok : <?= $row['jumlah'];?></a>
                                         </div>
                                     </div>
                                 </div>
-                                <form action="<?php echo base_url('Transaksi/tambah_keranjang/'.$row['nama_barang'].'/'.$row['harga']); ?>" method="post" enctype="multipart/form-data">
+                                <form action="<?= base_url('Transaksi/tambah_keranjang/'.$row['nama_barang'].'/'.$row['harga']); ?>" method="post" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-md">
@@ -145,25 +145,25 @@
                             ?>
                             <div style="height:350px;max-width:260px;width:100%;margin:10px;" class="card">
                                 <a>
-                                    <img height="200px" width="258px" src="<?php echo base_url('assets/foto_barang/'.$row['foto']);?>"/>
+                                    <img height="200px" width="258px" src="<?= base_url('assets/foto_barang/'.$row['foto']);?>"/>
                                 </a>
                                 <br>
                                 <div class="container">
                                     <div class="row">
                                         <div class="col">
-                                            <a style="color: orange;">Rp <?php echo number_format($row['harga'], 2, ",", ".")?></a><br>
+                                            <a style="color: orange;">Rp <?= number_format($row['harga'], 2, ",", ".")?></a><br>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div style="text-align: left;" class="col-md">
-                                            <a style="color: black;"><?php echo $row['nama_barang']?></a>
+                                            <a style="color: black;"><?= $row['nama_barang']?></a>
                                         </div>
                                         <div style="text-align: right;" class="col-md">
-                                            <a style="color:black">Stok : <?php echo $row['jumlah'];?></a>
+                                            <a style="color:black">Stok : <?= $row['jumlah'];?></a>
                                         </div>
                                     </div>
                                 </div>
-                                <form action="<?php echo base_url('Transaksi/tambah_keranjang/'.$row['nama_barang'].'/'.$row['harga']); ?>" method="post" enctype="multipart/form-data">
+                                <form action="<?= base_url('Transaksi/tambah_keranjang/'.$row['nama_barang'].'/'.$row['harga']); ?>" method="post" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-md">

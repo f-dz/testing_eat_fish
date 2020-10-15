@@ -14,7 +14,7 @@
 <div id="tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
 <div role="document" class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-		<form method="post" action="<?php echo base_url('User/tambah_user'); ?>" class="form-validate">
+		<form method="post" action="<?= base_url('User/tambah_user'); ?>" class="form-validate">
 			<div class="modal-header">
 				<h4 id="exampleModalLabel" class="modal-title">Tambah User</h4>
 				<button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
@@ -48,10 +48,10 @@
 
 <!-- MODAL EDIT -->
 <?php foreach ($user as $row) : ?>
-<div id="edit<?php echo htmlspecialchars($row['id_user']);?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+<div id="edit<?= htmlspecialchars($row['id_user']);?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
 <div role="document" class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-		<form method="post" action="<?php echo base_url('User/edit_user/'.$row['id_user']); ?>" class="form-validate">
+		<form method="post" action="<?= base_url('User/edit_user/'.$row['id_user']); ?>" class="form-validate">
 			<div class="modal-header">
 				<h4 id="exampleModalLabel" class="modal-title">Edit User</h4>
 				<button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
@@ -59,11 +59,11 @@
 			<div class="modal-body">
                 <div class="form-group">
                     <label>Username</label>
-                    <input type="text" name="username" required class="form-control" value="<?php echo $row['username'];?>">
+                    <input type="text" name="username" required class="form-control" value="<?= $row['username'];?>">
                 </div>
                 <div class="form-group">
                     <label>Password</label>
-                    <input type="password" name="password" required class="form-control" value="<?php echo $row['password'];?>">
+                    <input type="password" name="password" required class="form-control" value="<?= $row['password'];?>">
                 </div>
                 <div class="form-group">
                     <label>Level</label>
@@ -115,14 +115,14 @@
 									<?php $i=1; ?>
 									<?php foreach ($user as $row) : ?>
 										<tr>
-											<td align="center" style="max-width:30px;"><?php echo $i; ?></td>
-											<td><?php echo htmlspecialchars($row['username']); ?></td>
-											<td><?php echo htmlspecialchars($row['password']); ?></td>
-											<td><?php echo htmlspecialchars($row['level']); ?></td>
+											<td align="center" style="max-width:30px;"><?= $i; ?></td>
+											<td><?= htmlspecialchars($row['username']); ?></td>
+											<td><?= htmlspecialchars($row['password']); ?></td>
+											<td><?= htmlspecialchars($row['level']); ?></td>
 											<td style="min-width:150px;" align="center">
-                                                <a class="btn small btn-warning" data-toggle="modal" data-target="#edit<?php echo $row['id_user'];?>" title='Edit'>
+                                                <a class="btn small btn-warning" data-toggle="modal" data-target="#edit<?= $row['id_user'];?>" title='Edit'>
                                                 &ensp;<i class="fa fa-pencil" style="color:white">&ensp;Edit</i>&ensp;</a>&ensp;
-                                                <a  class="btn small btn-danger" href="<?php echo base_url('User/hapus_user/')?><?php echo htmlspecialchars($row['id_user']);?>" title='Hapus'>
+                                                <a  class="btn small btn-danger" href="<?= base_url('User/hapus_user/')?><?= htmlspecialchars($row['id_user']);?>" title='Hapus'>
                                                 &ensp;<i class="fa fa-trash" style="color:white">&ensp;Hapus</i>&ensp;</a>
 											</td>
 											<?php $i++;?>
