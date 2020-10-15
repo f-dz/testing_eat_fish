@@ -79,14 +79,14 @@ class Transaksi extends CI_Controller {
             ?>
             <script type="text/javascript">
                 alert("Berhasil melakukan transaksi");
-                window.location.href="<?php echo base_url('Transaksi/produk')?>"
+                window.location.href="<?= base_url('Transaksi/produk')?>"
             </script>
             <?php
         } else {
             ?>
             <script type="text/javascript">
                 alert("Gagal melakukan transaksi");
-                window.location.href="<?php echo base_url('Transaksi/produk')?>"
+                window.location.href="<?= base_url('Transaksi/produk')?>"
             </script>
             <?php
         }
@@ -106,14 +106,14 @@ class Transaksi extends CI_Controller {
                     ?>
                     <script type="text/javascript">
                         alert("Berhasil memperbarui status");
-                        window.location.href="<?php echo base_url('Transaksi')?>"
+                        window.location.href="<?= base_url('Transaksi')?>"
                     </script>
                     <?php
                 } else {
                     ?>
                     <script type="text/javascript">
                         alert("Gagal memperbarui status");
-                        window.location.href="<?php echo base_url('Transaksi')?>"
+                        window.location.href="<?= base_url('Transaksi')?>"
                     </script>
                     <?php
                 }
