@@ -8,32 +8,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <link rel="icon" href="images/favicon.ico" type="image/ico" />
 
-    <title><?php echo $judul; ?></title>
+    <title><?= $judul; ?></title>
 
     <!-- Bootstrap -->
-    <link href="<?php echo base_url('assets/template/vendors/bootstrap/dist/css/bootstrap.min.css')?>" rel="stylesheet">
+    <link href="<?= base_url('assets/template/vendors/bootstrap/dist/css/bootstrap.min.css')?>" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="<?php echo base_url('assets/template/vendors/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
+    <link href="<?= base_url('assets/template/vendors/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
     <!-- NProgress -->
-    <link href="<?php echo base_url('assets/template/vendors/nprogress/nprogress.css')?>" rel="stylesheet">
+    <link href="<?= base_url('assets/template/vendors/nprogress/nprogress.css')?>" rel="stylesheet">
     <!-- iCheck -->
-    <link href="<?php echo base_url('assets/template/vendors/iCheck/skins/flat/green.css')?>" rel="stylesheet">
+    <link href="<?= base_url('assets/template/vendors/iCheck/skins/flat/green.css')?>" rel="stylesheet">
 	
     <!-- bootstrap-progressbar -->
-    <link href="<?php echo base_url('assets/template/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css')?>" rel="stylesheet">
+    <link href="<?= base_url('assets/template/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css')?>" rel="stylesheet">
     <!-- JQVMap -->
-    <link href="<?php echo base_url('assets/template/vendors/jqvmap/dist/jqvmap.min.css')?>" rel="stylesheet"/>
+    <link href="<?= base_url('assets/template/vendors/jqvmap/dist/jqvmap.min.css')?>" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
-    <link href="<?php echo base_url('assets/template/vendors/bootstrap-daterangepicker/daterangepicker.css')?>" rel="stylesheet">
+    <link href="<?= base_url('assets/template/vendors/bootstrap-daterangepicker/daterangepicker.css')?>" rel="stylesheet">
     <!-- Datatables -->    
-    <link href="<?php echo base_url('assets/template/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css')?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/template/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css')?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/template/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css')?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/template/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css')?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/template/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css')?>" rel="stylesheet">
+    <link href="<?= base_url('assets/template/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css')?>" rel="stylesheet">
+    <link href="<?= base_url('assets/template/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css')?>" rel="stylesheet">
+    <link href="<?= base_url('assets/template/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css')?>" rel="stylesheet">
+    <link href="<?= base_url('assets/template/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css')?>" rel="stylesheet">
+    <link href="<?= base_url('assets/template/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css')?>" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="<?php echo base_url('assets/template/build/css/custom.min.css')?>" rel="stylesheet">
+    <link href="<?= base_url('assets/template/build/css/custom.min.css')?>" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -50,11 +50,11 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="<?php echo base_url('assets/template/images/user.png')?>" alt="..." class="img-circle profile_img">
+                <img src="<?= base_url('assets/template/images/user.png')?>" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2><?php echo $this->session->userdata('username'); ?></h2>
+                <h2><?= $this->session->userdata('username'); ?></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -66,11 +66,11 @@
               <div class="menu_section">
                 <h3>Menu</h3>
                 <ul class="nav side-menu">
-                  <li><a href="<?php echo base_url('User')?>"><i class="fa fa-home"></i> Dashboard </a>
-                  <li><a href="<?php echo base_url('Barang')?>"><i class="fa fa-list"></i> Daftar Barang </a>
-                  <li><a href="<?php echo base_url('Transaksi')?>"><i class="fa fa-list-alt"></i> Daftar Transaksi </a>
+                  <li><a href="<?= base_url('User')?>"><i class="fa fa-home"></i> Dashboard </a>
+                  <li><a href="<?= base_url('Barang')?>"><i class="fa fa-list"></i> Daftar Barang </a>
+                  <li><a href="<?= base_url('Transaksi')?>"><i class="fa fa-list-alt"></i> Daftar Transaksi </a>
                   <?php if ($this->session->userdata('level')=='manager'): ?>
-                  <li><a href="<?php echo base_url('User/daftar_user')?>"><i class="fa fa-user"></i> Daftar User </a>
+                  <li><a href="<?= base_url('User/daftar_user')?>"><i class="fa fa-user"></i> Daftar User </a>
                   <?php endif;?>
                   </li>
                 </ul>
@@ -80,7 +80,7 @@
 
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="<?php echo site_url('Login/logout'); ?>">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="<?= site_url('Login/logout'); ?>">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -98,10 +98,10 @@
               <ul class=" navbar-right">
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                   <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                    <img src="<?php echo base_url('assets/template/images/user.png')?>" alt=""><?php echo $this->session->userdata('level'); ?>
+                    <img src="<?= base_url('assets/template/images/user.png')?>" alt=""><?= $this->session->userdata('level'); ?>
                   </a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item"  href="<?php echo site_url('Login/logout'); ?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                    <a class="dropdown-item"  href="<?= site_url('Login/logout'); ?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                   </div>
                 </li>
               </ul>
