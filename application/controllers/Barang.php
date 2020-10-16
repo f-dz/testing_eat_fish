@@ -29,7 +29,8 @@ class Barang extends CI_Controller {
             
             if ($jenis_barang=="Ikan") {
                 $jenis = "Ikan";
-            } else {
+            }
+            if ($jenis_barang=="Produk Olahan") {
                 $jenis = "Produk_Olahan";
             }
 
