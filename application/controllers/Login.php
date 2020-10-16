@@ -34,8 +34,12 @@ class Login extends CI_Controller {
             $this->session->set_userdata($sesuser);
             redirect('User');
         }else{
-            echo $this->session->set_flashdata('notif','Username atau Password salah !');
-            redirect('Login');
+            ?>
+            <script type="text/javascript">
+                alert("Username atau password salah");
+                window.location.href="<?= base_url('Login')?>"
+            </script>
+            <?php
 		}
     }
     
