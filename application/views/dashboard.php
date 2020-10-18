@@ -22,7 +22,7 @@
             <div class="clearfix"></div>
         </div>
         <div class="x_content">
-            <div style="text-align: center;" id="chart2"></div>
+            <div style="text-align: center; height: 350px" id="chart2"></div>
         </div>
     </div>
 

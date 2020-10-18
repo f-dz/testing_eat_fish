@@ -15,16 +15,6 @@
     <script src="<?= base_url('assets/template/vendors/bootstrap/dist/js/bootstrap.bundle.min.js')?>"></script>
     <!-- FastClick -->
     <script src="<?= base_url('assets/template/vendors/fastclick/lib/fastclick.js')?>"></script>
-    <!-- NProgress -->
-    <script src="<?= base_url('assets/template/vendors/nprogress/nprogress.js')?>"></script>
-    <!-- Chart.js -->
-    <script src="<?= base_url('assets/template/vendors/Chart.js/dist/Chart.min.js')?>"></script>
-    <!-- gauge.js -->
-    <script src="<?= base_url('assets/template/vendors/gauge.js/dist/gauge.min.js')?>"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="<?= base_url('assets/template/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js')?>"></script>
-    <!-- iCheck -->
-    <script src="<?= base_url('assets/template/vendors/iCheck/icheck.min.js')?>"></script>
     <!-- Skycons -->
     <script src="<?= base_url('assets/template/vendors/skycons/skycons.js')?>"></script>
     <!-- Flot -->
@@ -62,9 +52,6 @@
     <script src="<?= base_url('assets/template/vendors/jszip/dist/jszip.min.js')?>"></script>
     <script src="<?= base_url('assets/template/vendors/pdfmake/build/pdfmake.min.js')?>"></script>
     <script src="<?= base_url('assets/template/vendors/pdfmake/build/vfs_fonts.js')?>"></script>
-    <!-- ECharts -->
-    <script src="<?= base_url('assets/template/vendors/echarts/dist/echarts.min.js')?>"></script>
-    <script src="<?= base_url('assets/template/vendors/echarts/map/js/world.js')?>"></script>
 
     <!-- Custom Theme Scripts -->
     <script src="<?= base_url('assets/template/build/js/custom.min.js')?>"></script>
