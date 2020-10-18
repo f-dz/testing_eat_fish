@@ -500,7 +500,7 @@ class CI_Output {
 				}
 			}
 
-			echo $output;
+			print($output);
 			log_message('info', 'Final output sent to browser');
 			log_message('debug', 'Total execution time: '.$elapsed);
 			return;
@@ -527,7 +527,7 @@ class CI_Output {
 			}
 		}
 
-		// Does the controller contain a function named _output()?
+		// Does the controller contain a function named _output()?s
 		// If so send the output there.  Otherwise, echo it.
 		if (method_exists($CI, '_output'))
 		{
@@ -535,7 +535,7 @@ class CI_Output {
 		}
 		else
 		{
-			echo $output; // Send it to the browser!
+			print($output); // Send it to the browser!
 		}
 
 		log_message('info', 'Final output sent to browser');
