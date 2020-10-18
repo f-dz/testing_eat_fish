@@ -79,11 +79,10 @@
                     <table class="table-responsive" width="100%">
                         <tbody>
                             <?php $i=0; foreach($ikan as $row) :
-                            if($i%3==0){
-                                echo"<tr>";
-                            }
-                            echo "<td>";
-                            ?>
+                            if($i%3==0) : ?>
+                                <tr>
+                            <?php endif;?>
+                            <td>                             
                             <div style="height:350px;max-width:260px;width:100%;margin:10px;" class="card">
                                 <a>
                                     <img height="200px" width="258px" src="<?= base_url('assets/foto_barang/'.$row['foto']);?>"/>
@@ -122,13 +121,10 @@
                                      </div>
                                 </form>
                             </div>
-                            <?php
-                            echo "</td>";
-                            if ($i%3==2){
-                                echo "</tr>";
-                            }
-                            $i++;
-                            ?>
+                            </td>
+                            <?php if ($i%3==2) : ?>
+                                </tr>
+                            <?php endif; $i++;?>
                         <?php endforeach; ?>
                         </tbody>
                     </table>
@@ -138,11 +134,10 @@
                     <table class="table-responsive" width="100%">
                     <tbody>
                             <?php $i=0; foreach($produk_olahan as $row) :
-                            if($i%3==0){
-                                echo"<tr>";
-                            }
-                            echo "<td>";
-                            ?>
+                            if($i%3==0) : ?>
+                                <tr>
+                            <?php endif;?>
+                            <td>
                             <div style="height:350px;max-width:260px;width:100%;margin:10px;" class="card">
                                 <a>
                                     <img height="200px" width="258px" src="<?= base_url('assets/foto_barang/'.$row['foto']);?>"/>
@@ -181,13 +176,10 @@
                                      </div>
                                 </form>
                             </div>
-                            <?php
-                            echo "</td>";
-                            if ($i%3==2){
-                                echo "</tr>";
-                            }
-                            $i++;
-                            ?>
+                            </td>
+                            <?php if ($i%3==2) : ?>
+                                </tr>
+                            <?php endif; $i++;?>
                         <?php endforeach; ?>
                         </tbody>
                     </table>
