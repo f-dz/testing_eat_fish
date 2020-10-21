@@ -94,6 +94,7 @@ class Morris.Grid extends Morris.EventEmitter
   # Default options
   #
   gridDefaults:
+    # dateFormat: null
     dateFormat: null
     axes: true
     grid: true
