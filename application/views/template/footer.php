@@ -50,8 +50,6 @@
     <script src="<?= base_url('assets/template/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js')?>"></script>
     <script src="<?= base_url('assets/template/vendors/datatables.net-scroller/js/dataTables.scroller.min.js')?>"></script>
     <script src="<?= base_url('assets/template/vendors/jszip/dist/jszip.min.js')?>"></script>
-    <script src="<?= base_url('assets/template/vendors/pdfmake/build/pdfmake.min.js')?>"></script>
-    <script src="<?= base_url('assets/template/vendors/pdfmake/build/vfs_fonts.js')?>"></script>
 
     <!-- Custom Theme Scripts -->
     <script src="<?= base_url('assets/template/build/js/custom.min.js')?>"></script>
