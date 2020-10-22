@@ -11,7 +11,7 @@
                             <h1 align="center"><i style="font-size:80px;" class="fa fa-cart-arrow-down"></i></h1>
                         </div>
                     </div>
-                    <?php if (sizeof($keranjang)!=0) : ?>
+                    <?php if (count($keranjang)!=0) : ?>
                         <?php $jumlah=0; foreach ($keranjang as $row) :?>
                             <div class="row">
                                 <div class="col-md-6">
@@ -59,7 +59,7 @@
                         </form>
                         <div class="row">
                             <div style="text-align: center;" class="col-md-10">
-                                <a class="btn btn-warning" href="<?= filter_url(base_url('Transaksi/reset_keranjang'), FILTER_SANITIZE_URL);?>">Reset Keranjang</a>                               
+                                <a class="btn btn-warning" href="<?= filter_var(base_url('Transaksi/reset_keranjang'), FILTER_SANITIZE_URL);?>">Reset Keranjang</a>                               
                             </div>
                         </div>
                     <?php else : ?>

@@ -10,14 +10,14 @@
     <title><?= $judul; ?></title>
 
     <!-- Bootstrap -->
-    <link href="<?= base_url('assets/template/vendors/bootstrap/dist/css/bootstrap.min.css')?>" rel="stylesheet">
+    <link href="<?= filter_var(base_url('assets/template/vendors/bootstrap/dist/css/bootstrap.min.css')?>" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="<?= base_url('assets/template/vendors/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
+    <link href="<?= filter_var(base_url('assets/template/vendors/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
     <!-- Animate.css -->
-    <link href="<?= base_url('assets/template/vendors/animate.css/animate.min.css')?>" rel="stylesheet">
+    <link href="<?= filter_var(base_url('assets/template/vendors/animate.css/animate.min.css')?>" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="<?= base_url('assets/template/build/css/custom.min.css')?>" rel="stylesheet">
+    <link href="<?= filter_var(base_url('assets/template/build/css/custom.min.css')?>" rel="stylesheet">
   </head>
 
   <style>

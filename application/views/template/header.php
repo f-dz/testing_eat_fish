@@ -11,22 +11,22 @@
     <title><?= $judul; ?></title>
 
     <!-- Bootstrap -->
-    <link href="<?= base_url('assets/template/vendors/bootstrap/dist/css/bootstrap.min.css')?>" rel="stylesheet">
+    <link href="<?= filter_var(base_url('assets/template/vendors/bootstrap/dist/css/bootstrap.min.css'), FILTER_SANITIZE_URL);?>" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="<?= base_url('assets/template/vendors/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
+    <link href="<?= filter_var(base_url('assets/template/vendors/font-awesome/css/font-awesome.min.css'), FILTER_SANITIZE_URL);?>" rel="stylesheet">
     <!-- JQVMap -->
-    <link href="<?= base_url('assets/template/vendors/jqvmap/dist/jqvmap.min.css')?>" rel="stylesheet"/>
+    <link href="<?= filter_var(base_url('assets/template/vendors/jqvmap/dist/jqvmap.min.css'), FILTER_SANITIZE_URL);?>" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
-    <link href="<?= base_url('assets/template/vendors/bootstrap-daterangepicker/daterangepicker.css')?>" rel="stylesheet">
+    <link href="<?= filter_var(base_url('assets/template/vendors/bootstrap-daterangepicker/daterangepicker.css'), FILTER_SANITIZE_URL);?>" rel="stylesheet">
     <!-- Datatables -->    
-    <link href="<?= base_url('assets/template/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css')?>" rel="stylesheet">
-    <link href="<?= base_url('assets/template/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css')?>" rel="stylesheet">
-    <link href="<?= base_url('assets/template/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css')?>" rel="stylesheet">
-    <link href="<?= base_url('assets/template/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css')?>" rel="stylesheet">
-    <link href="<?= base_url('assets/template/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css')?>" rel="stylesheet">
+    <link href="<?= filter_var(base_url('assets/template/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css'), FILTER_SANITIZE_URL);?>" rel="stylesheet">
+    <link href="<?= filter_var(base_url('assets/template/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css'), FILTER_SANITIZE_URL);?>" rel="stylesheet">
+    <link href="<?= filter_var(base_url('assets/template/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css'), FILTER_SANITIZE_URL);?>" rel="stylesheet">
+    <link href="<?= filter_var(base_url('assets/template/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css'), FILTER_SANITIZE_URL);?>" rel="stylesheet">
+    <link href="<?= filter_var(base_url('assets/template/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css'), FILTER_SANITIZE_URL);?>" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="<?= base_url('assets/template/build/css/custom.min.css')?>" rel="stylesheet">
+    <link href="<?= filter_var(base_url('assets/template/build/css/custom.min.css')?>" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -43,7 +43,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="<?= base_url('assets/template/images/user.png')?>" alt="..." class="img-circle profile_img">
+                <img src="<?= filter_var(base_url('assets/template/images/user.png'), FILTER_SANITIZE_URL);?>" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
@@ -59,11 +59,11 @@
               <div class="menu_section">
                 <h3>Menu</h3>
                 <ul class="nav side-menu">
-                  <li><a href="<?= base_url('User')?>"><i class="fa fa-home"></i> Dashboard </a>
-                  <li><a href="<?= base_url('Barang')?>"><i class="fa fa-list"></i> Daftar Barang </a>
-                  <li><a href="<?= base_url('Transaksi')?>"><i class="fa fa-list-alt"></i> Daftar Transaksi </a>
+                  <li><a href="<?= filter_var(base_url('User'), FILTER_SANITIZE_URL);?>"><i class="fa fa-home"></i> Dashboard </a>
+                  <li><a href="<?= filter_var(base_url('Barang'), FILTER_SANITIZE_URL);?>"><i class="fa fa-list"></i> Daftar Barang </a>
+                  <li><a href="<?= filter_var(base_url('Transaksi'), FILTER_SANITIZE_URL);?>"><i class="fa fa-list-alt"></i> Daftar Transaksi </a>
                   <?php if ($this->session->userdata('level')=='manager'): ?>
-                  <li><a href="<?= base_url('User/daftar_user')?>"><i class="fa fa-user"></i> Daftar User </a>
+                  <li><a href="<?= filter_var(base_url('User/daftar_user'), FILTER_SANITIZE_URL);?>"><i class="fa fa-user"></i> Daftar User </a>
                   <?php endif;?>
                   </li>
                 </ul>
@@ -91,10 +91,10 @@
               <ul class=" navbar-right">
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                   <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                    <img src="<?= base_url('assets/template/images/user.png')?>" alt=""><?= $this->session->userdata('level'); ?>
+                    <img src="<?= filter_var(base_url('assets/template/images/user.png')?>" alt=""><?= $this->session->userdata('level'); ?>
                   </a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item"  href="<?= site_url('Login/logout'); ?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                    <a class="dropdown-item"  href="<?= site_url('Login/logout'), FILTER_SANITIZE_URL); ?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                   </div>
                 </li>
               </ul>
