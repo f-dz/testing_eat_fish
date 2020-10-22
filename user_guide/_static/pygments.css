@@ -87,7 +87,7 @@
 
 .highlight .gd {
     color: #000;
-    background-color: #ffdddd
+    background-color: #fdd
 }
 
 
@@ -116,7 +116,7 @@
 
 .highlight .gi {
     color: #000;
-    background-color: #ddffdd
+    background-color: #dfd
 }
 
 
@@ -193,7 +193,7 @@
 /* Keyword.Reserved */
 
 .highlight .kt {
-    color: #445588;
+    color: #458;
     font-weight: bold
 }
 
@@ -201,7 +201,7 @@
 /* Keyword.Type */
 
 .highlight .m {
-    color: #009999
+    color: #099
 }
 
 
@@ -229,7 +229,7 @@
 /* Name.Builtin */
 
 .highlight .nc {
-    color: #445588;
+    color: #458;
     font-weight: bold
 }
 
