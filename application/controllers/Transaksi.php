@@ -81,14 +81,14 @@ class Transaksi extends CI_Controller {
             ?>
             <script type="text/javascript">
                 alert("Berhasil melakukan transaksi");
-                window.location.href="<?= base_url('Transaksi/produk')?>"
+                window.location.href="<?= filter_var(base_url('Transaksi/produk'), FILTER_SANITIZE_URL);?>"
             </script>
             <?php
         } else {
             ?>
             <script type="text/javascript">
                 alert("Gagal melakukan transaksi");
-                window.location.href="<?= base_url('Transaksi/produk')?>"
+                window.location.href="<?= filter_var(base_url('Transaksi/produk'), FILTER_SANITIZE_URL);?>"
             </script>
             <?php
         }
@@ -108,14 +108,14 @@ class Transaksi extends CI_Controller {
                     ?>
                     <script type="text/javascript">
                         alert("Berhasil memperbarui status");
-                        window.location.href="<?= base_url('Transaksi')?>"
+                        window.location.href="<?= filter_var(base_url('Transaksi'), FILTER_SANITIZE_URL);?>"
                     </script>
                     <?php
                 } else {
                     ?>
                     <script type="text/javascript">
                         alert("Gagal memperbarui status");
-                        window.location.href="<?= base_url('Transaksi')?>"
+                        window.location.href="<?= filter_var(base_url('Transaksi'), FILTER_SANITIZE_URL);?>"
                     </script>
                     <?php
                 }

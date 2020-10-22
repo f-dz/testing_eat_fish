@@ -59,14 +59,14 @@ class User extends CI_Controller {
                 ?>
                 <script type="text/javascript">
                     alert("Berhasil menambah data user");
-                    window.location.href="<?= base_url('User/daftar_user')?>"
+                    window.location.href="<?= filter_var(base_url('User/daftar_user'), FILTER_SANITIZE_URL);?>"
                 </script>
                 <?php
             } else {
                 ?>
                 <script type="text/javascript">
                     alert("Gagal menambah data user");
-                    window.location.href="<?= base_url('User/daftar_user')?>"
+                    window.location.href="<?= filter_var(base_url('User/daftar_user'), FILTER_SANITIZE_URL);?>"
                 </script>
                 <?php
             }
@@ -80,14 +80,14 @@ class User extends CI_Controller {
                 ?>
                 <script type="text/javascript">
                     alert("Berhasil menghapus data user");
-                    window.location.href="<?= base_url('User/daftar_user')?>"
+                    window.location.href="<?= filter_var(base_url('User/daftar_user'), FILTER_SANITIZE_URL);?>"
                 </script>
                 <?php
             } else {
                 ?>
                 <script type="text/javascript">
                     alert("Gagal menghapus data user");
-                    window.location.href="<?= base_url('User/daftar_user')?>"
+                    window.location.href="<?= filter_var(base_url('User/daftar_user'), FILTER_SANITIZE_URL);?>"
                 </script>
                 <?php
             }
@@ -108,14 +108,14 @@ class User extends CI_Controller {
                 ?>
                 <script type="text/javascript">
                     alert("Berhasil mengedit data user");
-                    window.location.href="<?= base_url('User/daftar_user')?>"
+                    window.location.href="<?= filter_var(base_url('User/daftar_user'), FILTER_SANITIZE_URL);?>"
                 </script>
                 <?php
             } else {
                 ?>
                 <script type="text/javascript">
                     alert("Gagal mengedit data user");
-                    window.location.href="<?= base_url('User/daftar_user')?>"
+                    window.location.href="<?= filter_var(base_url('User/daftar_user'), FILTER_SANITIZE_URL);?>"
                 </script>
                 <?php
             }

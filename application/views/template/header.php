@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <link rel="icon" href="images/favicon.ico" type="image/ico" />
 
-    <title><?= $judul; ?></title>
+    <title><?= filter_var($judul, FILTER_SANITIZE_STRING); ?></title>
 
     <!-- Bootstrap -->
     <link href="<?= filter_var(base_url('assets/template/vendors/bootstrap/dist/css/bootstrap.min.css'), FILTER_SANITIZE_URL);?>" rel="stylesheet">
@@ -47,7 +47,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2><?= $this->session->userdata('username'); ?></h2>
+                <h2><?= filter_var($this->session->userdata('username'), FILTER_SANITIZE_STRING); ?></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -73,7 +73,7 @@
 
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="<?= site_url('Login/logout'); ?>">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="<?= filter_var(base_url('Login/logout'), FILTER_SANITIZE_URL); ?>">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -91,7 +91,7 @@
               <ul class=" navbar-right">
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                   <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                    <img src="<?= filter_var(base_url('assets/template/images/user.png'), FILTER_SANITIZE_URL);?>" alt=""><?= $this->session->userdata('level'); ?>
+                    <img src="<?= filter_var(base_url('assets/template/images/user.png'), FILTER_SANITIZE_URL);?>" alt=""><?= filter_var($this->session->userdata('level'), FILTER_SANITIZE_STRING); ?>
                   </a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item"  href="<?= filter_var(base_url('Login/logout'), FILTER_SANITIZE_URL); ?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a>

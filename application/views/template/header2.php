@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title><?= $judul; ?></title>
+    <title><?= filter_var($judul, FILTER_SANITIZE_STRING); ?></title>
 
     <!-- Bootstrap -->
     <link href="<?= filter_var(base_url('assets/template/vendors/bootstrap/dist/css/bootstrap.min.css'), FILTER_SANITIZE_URL)?>" rel="stylesheet">

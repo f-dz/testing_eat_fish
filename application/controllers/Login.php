@@ -37,7 +37,7 @@ class Login extends CI_Controller {
             ?>
             <script type="text/javascript">
                 alert("Username atau password salah");
-                window.location.href="<?= base_url('Login')?>"
+                window.location.href="<?= filter_var(base_url('Login'), FILTER_SANITIZE_URL);?>"
             </script>
             <?php
 		}

@@ -58,14 +58,14 @@ class Barang extends CI_Controller {
                 ?>
                 <script type="text/javascript">
                     alert("Berhasil menambah data barang");
-                    window.location.href="<?= base_url('Barang')?>"
+                    window.location.href="<?= filter_var(base_url('Barang'), FILTER_SANITIZE_URL);?>"
                 </script>
                 <?php
                 } else {
                 ?>
                 <script type="text/javascript">
                     alert("Gagal menambah data barang");
-                    window.location.href="<?= base_url('Barang')?>"
+                    window.location.href="<?= filter_var(base_url('Barang'), FILTER_SANITIZE_URL);?>"
                 </script>
                 <?php
                 }
@@ -73,7 +73,7 @@ class Barang extends CI_Controller {
                 ?>
                 <script type="text/javascript">
                     alert("Gagal menggunggah foto dan menambah barang");
-                    window.location.href="<?= base_url('Barang')?>"
+                    window.location.href="<?= filter_var(base_url('Barang'), FILTER_SANITIZE_URL);?>"
                 </script>
                 <?php
             }
@@ -93,14 +93,14 @@ class Barang extends CI_Controller {
                 ?>
                 <script type="text/javascript">
                     alert("Berhasil menghapus data barang");
-                    window.location.href="<?= base_url('Barang')?>"
+                    window.location.href="<?= filter_var(base_url('Barang'), FILTER_SANITIZE_URL);?>"
                 </script>
                 <?php
             } else {
                 ?>
                 <script type="text/javascript">
                     alert("Gagal menghapus data barang");
-                    window.location.href="<?= base_url('Barang')?>"
+                    window.location.href="<?= filter_var(base_url('Barang'), FILTER_SANITIZE_URL);?>"
                 </script>
                 <?php
             }
@@ -148,14 +148,14 @@ class Barang extends CI_Controller {
                 ?>
                 <script type="text/javascript">
                     alert("Berhasil mengedit data barang");
-                    window.location.href="<?= base_url('Barang')?>"
+                    window.location.href="<?= filter_var(base_url('Barang'), FILTER_SANITIZE_URL);?>"
                 </script>
                 <?php
                 } else {
                 ?>
                 <script type="text/javascript">
                     alert("Gagal mengedit data barang");
-                    window.location.href="<?= base_url('Barang')?>"
+                    window.location.href="<?= filter_var(base_url('Barang'), FILTER_SANITIZE_URL);?>"
                 </script>
                 <?php
                 }
@@ -163,7 +163,7 @@ class Barang extends CI_Controller {
             ?>
             <script type="text/javascript">
                 alert("Gagal menggunggah foto dan mengedit barang");
-                window.location.href="<?= base_url('Barang')?>"
+                window.location.href="<?= filter_var(base_url('Barang'), FILTER_SANITIZE_URL);?>"
             </script>
             <?php
             }
@@ -179,14 +179,14 @@ class Barang extends CI_Controller {
                 ?>
                 <script type="text/javascript">
                     alert("Berhasil memperbarui stok barang");
-                    window.location.href="<?= base_url('Barang')?>"
+                    window.location.href="<?= filter_var(base_url('Barang'), FILTER_SANITIZE_URL);?>"
                 </script>
                 <?php
             } else {
                 ?>
                 <script type="text/javascript">
                     alert("Gagal memperbarui stok barang");
-                    window.location.href="<?= base_url('Barang')?>"
+                    window.location.href="<?= filter_var(base_url('Barang'), FILTER_SANITIZE_URL);?>"
                 </script>
                 <?php
             }
