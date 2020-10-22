@@ -134,7 +134,7 @@
 /* Generic.Subheading */
 
 .gt {
-    color: #0044dd
+    color: #04d
 }
 
 
@@ -230,7 +230,7 @@
 /* Name.Constant */
 
 .nd {
-    color: #aa22ff
+    color: #a2f
 }
 
 
@@ -290,7 +290,7 @@
 /* Name.Variable */
 
 .ow {
-    color: #aa22ff;
+    color: #a2f;
     font-weight: bold
 }
 
@@ -362,7 +362,7 @@
 /* Literal.String.Double */
 
 .se {
-    color: #bb6622;
+    color: #b62;
     font-weight: bold
 }
 

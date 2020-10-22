@@ -56,7 +56,7 @@ div#pulldown-menu {
 }
 
 #pulldown-menu ul li.toctree-l1 a {
-	color: #ffffff;
+	color: #fff;
 	text-decoration: none;
 	font-size: 12px;
 	font-family: "Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif;
@@ -69,7 +69,7 @@ div#pulldown-menu {
 	line-height: 1.4em;
 	font-weight: 300;
 	font-family: Lucida Grande,Verdana,Geneva,sans-serif;
-	color: #aaaaaa;
+	color: #aaa;
 }
 
 /*hide pulldown menu on mobile devices*/
