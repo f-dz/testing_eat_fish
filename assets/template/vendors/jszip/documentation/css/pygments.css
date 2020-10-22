@@ -3,7 +3,7 @@
  */
 
 .hll {
-    background-color: #ffffcc
+    background-color: #ffc
 }
 
 .c {
@@ -15,7 +15,7 @@
 /* Comment */
 
 .err {
-    border: 1px solid #FF0000
+    border: 1px solid #f00
 }
 
 
@@ -30,7 +30,7 @@
 /* Keyword */
 
 .o {
-    color: #666666
+    color: #666
 }
 
 
@@ -68,7 +68,7 @@
 /* Comment.Special */
 
 .gd {
-    color: #a00000
+    color: #a00
 }
 
 
@@ -82,7 +82,7 @@
 /* Generic.Emph */
 
 .gr {
-    color: #ff0000
+    color: #f00
 }
 
 
@@ -104,7 +104,7 @@
 /* Generic.Inserted */
 
 .go {
-    color: #888888
+    color: #888
 }
 
 
@@ -180,14 +180,14 @@
 /* Keyword.Reserved */
 
 .kt {
-    color: #B00040
+    color: #b00040
 }
 
 
 /* Keyword.Type */
 
 .m {
-    color: #666666
+    color: #666
 }
 
 
@@ -215,7 +215,7 @@
 /* Name.Builtin */
 
 .nc {
-    color: #0000ff;
+    color: #00f;
     font-weight: bold
 }
 
@@ -223,7 +223,7 @@
 /* Name.Class */
 
 .no {
-    color: #880000
+    color: #800
 }
 
 
@@ -237,7 +237,7 @@
 /* Name.Decorator */
 
 .ni {
-    color: #999999;
+    color: #999;
     font-weight: bold
 }
 
@@ -253,7 +253,7 @@
 /* Name.Exception */
 
 .nf {
-    color: #0000ff
+    color: #00f
 }
 
 
@@ -267,7 +267,7 @@
 /* Name.Label */
 
 .nn {
-    color: #0000ff;
+    color: #00f;
     font-weight: bold
 }
 
@@ -298,35 +298,35 @@
 /* Operator.Word */
 
 .w {
-    color: #bbbbbb
+    color: #bbb
 }
 
 
 /* Text.Whitespace */
 
 .mf {
-    color: #666666
+    color: #666
 }
 
 
 /* Literal.Number.Float */
 
 .mh {
-    color: #666666
+    color: #666
 }
 
 
 /* Literal.Number.Hex */
 
 .mi {
-    color: #666666
+    color: #666
 }
 
 
 /* Literal.Number.Integer */
 
 .mo {
-    color: #666666
+    color: #666
 }
 
 
@@ -377,7 +377,7 @@
 /* Literal.String.Heredoc */
 
 .si {
-    color: #bb6688;
+    color: #b68;
     font-weight: bold
 }
 
@@ -392,7 +392,7 @@
 /* Literal.String.Other */
 
 .sr {
-    color: #bb6688
+    color: #b68
 }
 
 
@@ -441,7 +441,7 @@
 /* Name.Variable.Instance */
 
 .il {
-    color: #666666
+    color: #666
 }
 
 
