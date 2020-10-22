@@ -11,7 +11,7 @@
   display:block;
   margin:0;
   padding:0;
-  border: 0px solid #CCC;
+  border: 0px solid #ccc;
   overflow:visible;
   float:left;
   width:980px;
@@ -21,7 +21,7 @@
   position: relative;
   margin: 0;
   padding:0;    
-  border: 0px solid #CCC;    
+  border: 0px solid #ccc;    
   overflow:hidden;
   clear:both;
   height:300px;
@@ -33,10 +33,10 @@
   float:left;
   margin: 0;
   padding:5px;    
-  border: 1px solid #CCC; 
+  border: 1px solid #ccc; 
   font: normal 12px Verdana, Arial, Helvetica, sans-serif; 
-  color:#5A5655;   
-  background-color:#F8F8F8;  
+  color:#5a5655;   
+  background-color:#f8f8f8;  
   height:300px;
   text-align:left;
   overflow:visible;    
@@ -52,10 +52,10 @@
   position: relative; 
   clear:both;
   margin:             3px 0 0 0;   
-  border:             1px solid #CCC;
+  border:             1px solid #ccc;
   padding:            0;    
-  color:              #5A5655;   
-  background-color:   #F8F8F8;
+  color:              #5a5655;   
+  background-color:   #f8f8f8;
   height:40px;
   text-align:left;
   overflow:auto;    
@@ -70,11 +70,11 @@
   display:block;
   position: relative;
   margin:0;   
-  border:1px solid #E0E0E0;
+  border:1px solid #e0e0e0;
   padding:5px;   
   font: bold 16px Verdana, Arial, Helvetica, sans-serif; 
-  color:#5A5655;   
-  background-color:#E0E0E0;
+  color:#5a5655;   
+  background-color:#e0e0e0;
   clear:both;
   text-align:left; 
   z-index:88;
@@ -89,8 +89,8 @@
   padding: 0px;  
   margin: 10px 0;      
   clear: both;
-  border: 0px solid #CCCCCC;    
-  background: transparent; /*#EEEEEE */
+  border: 0px solid #ccc;    
+  background: transparent;
 }
 .swMain ul.anchor li{ 
   position: relative; 
@@ -99,7 +99,7 @@
   padding: 0; 
   padding-left:3px;
   padding-right: 3px;
-  border: 0px solid #E0E0E0;      
+  border: 0px solid #e0e0e0;      
   float: left;
 }
 /* Anchor Element Style */
@@ -139,49 +139,49 @@
   font: normal 12px Verdana, Arial, Helvetica, sans-serif;
 }
 .swMain ul.anchor li a.selected{
-  color:#F8F8F8;
-  background: #EA8511;  /* EA8511 */
-  border: 1px solid #EA8511;
+  color:#f8f8f8;
+  background: #ea8511;  /* EA8511 */
+  border: 1px solid #ea8511;
   cursor:text;
   -moz-box-shadow: 5px 5px 8px #888;
   -webkit-box-shadow: 5px 5px 8px #888;
   box-shadow: 5px 5px 8px #888;
 }
 .swMain ul.anchor li a.selected:hover {
-  color:#F8F8F8;  
-  background: #EA8511;  
+  color:#f8f8f8;  
+  background: #ea8511;  
 }
 
 .swMain ul.anchor li a.done { 
   position:relative;
-  color:#FFF;  
-  background: #8CC63F;  
-  border: 1px solid #8CC63F;   
+  color:#fff;  
+  background: #8cc63f;  
+  border: 1px solid #8cc63f;   
   z-index:99;
 }
 .swMain ul.anchor li a.done:hover {
-  color:#5A5655;  
-  background: #8CC63F; 
-  border: 1px solid #5A5655;   
+  color:#5a5655;  
+  background: #8cc63f; 
+  border: 1px solid #5a5655;   
 }
 .swMain ul.anchor li a.disabled {
-  color:#CCCCCC;  
-  background: #F8F8F8;
-  border: 1px solid #CCC;  
+  color:#ccc;  
+  background: #f8f8f8;
+  border: 1px solid #ccc;  
   cursor:text;   
 }
 .swMain ul.anchor li a.disabled:hover {
-  color:#CCCCCC;  
-  background: #F8F8F8;     
+  color:#ccc;  
+  background: #f8f8f8;     
 }
 
 .swMain ul.anchor li a.error {
-  color:#6c6c6c !important;  
-  background: #f08f75 !important;
-  border: 1px solid #fb3500 !important;      
+  color:#6c6c6c;  
+  background: #f08f75;
+  border: 1px solid #fb3500;      
 }
 .swMain ul.anchor li a.error:hover {
-  color:#000 !important;       
+  color:#000;       
 }
 
 .swMain .buttonNext {
@@ -193,17 +193,17 @@
   text-align: center;
   font: bold 13px Verdana, Arial, Helvetica, sans-serif;
   width:100px;
-  color:#FFF;
+  color:#fff;
   outline-style:none;
-  background-color:   #5A5655;
-  border: 1px solid #5A5655;
+  background-color:   #5a5655;
+  border: 1px solid #5a5655;
   -moz-border-radius  : 5px; 
   -webkit-border-radius: 5px;    
 }
 .swMain .buttonDisabled {
-  color:#F8F8F8  !important;
-  background-color: #CCCCCC !important;
-  border: 1px solid #CCCCCC  !important;
+  color:#f8f8f8;
+  background-color: #ccc;
+  border: 1px solid #ccc;
   cursor:text;    
 }
 .swMain .buttonPrevious {
@@ -215,10 +215,10 @@
   text-align: center;
   font: bold 13px Verdana, Arial, Helvetica, sans-serif;
   width:100px;
-  color:#FFF;
+  color:#fff;
   outline-style:none;
-  background-color:   #5A5655;
-  border: 1px solid #5A5655;
+  background-color:   #5a5655;
+  border: 1px solid #5a5655;
   -moz-border-radius  : 5px; 
   -webkit-border-radius: 5px;    
 }
@@ -231,10 +231,10 @@
   text-align: center;
   font: bold 13px Verdana, Arial, Helvetica, sans-serif;
   width:100px;
-  color:#FFF;
+  color:#fff;
   outline-style:none;
-  background-color:   #5A5655;
-  border: 1px solid #5A5655;
+  background-color:   #5a5655;
+  border: 1px solid #5a5655;
   -moz-border-radius  : 5px; 
   -webkit-border-radius: 5px;    
 }
@@ -242,14 +242,14 @@
 /* Form Styles */
 
 .txtBox {
-  border:1px solid #CCCCCC;
-  color:#5A5655;
+  border:1px solid #ccc;
+  color:#5a5655;
   font:13px Verdana,Arial,Helvetica,sans-serif;
   padding:2px;
   width:430px;
 }
 .txtBox:focus {
-  border:1px solid #EA8511;
+  border:1px solid #ea8511;
 }
 
 .swMain .loader {
@@ -258,10 +258,10 @@
   float:left;  
   margin: 2px 0 0 2px;
   padding:8px 10px 8px 40px;
-  border: 1px solid #FFD700; 
+  border: 1px solid #ffd700; 
   font: bold 13px Verdana, Arial, Helvetica, sans-serif; 
-  color:#5A5655;       
-  background: #FFF url(../images/loader.gif) no-repeat 5px;  
+  color:#5a5655;       
+  background: #fff url(../images/loader.gif) no-repeat 5px;  
   -moz-border-radius  : 5px;
   -webkit-border-radius: 5px;
   z-index:998;
@@ -272,10 +272,10 @@
   float:left;
   margin: 4px 0 0 5px;
   padding:5px;
-  border: 1px solid #FFD700; 
-  background-color: #FFFFDD;  
+  border: 1px solid #ffd700; 
+  background-color: #ffd;  
   font: normal 12px Verdana, Arial, Helvetica, sans-serif; 
-  color:#5A5655;         
+  color:#5a5655;         
   -moz-border-radius  : 5px;
   -webkit-border-radius: 5px;
   z-index:999;
@@ -287,9 +287,9 @@
   float:left;
 }
 .swMain .msgBox .close {
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 3px;
-  color: #CCC;
+  color: #ccc;
   display: block;
   float: right;
   margin: 0 0 0 5px;
@@ -300,6 +300,6 @@
   text-decoration: none;
 }
 .swMain .msgBox .close:hover{
-  color: #EA8511;
-  border: 1px solid #EA8511;  
+  color: #ea8511;
+  border: 1px solid #ea8511;  
 }

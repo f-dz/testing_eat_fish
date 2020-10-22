@@ -9,10 +9,10 @@ body {
   padding: 0;
   padding-top: 8px;
   padding-bottom:10px;    
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid #ccc;
   font: normal 12px Verdana, Arial, Helvetica, sans-serif; 
   color: #5A5655;   
-  background-color: #FAFAFA;    
+  background-color: #fafafa;    
 }
 .demoHead .demoExampleLinks {
   text-align:center;
@@ -36,38 +36,38 @@ body {
 .demoHead a.btn{
   -moz-border-radius    : 5px;
   -webkit-border-radius : 5px;
-  background            : #7D7D7D;
-  color                 : #FFF;
+  background            : #7d7d7d;
+  color                 : #fff;
   margin                : 2px 2px 0px 2px;
   padding               : 5px 12px 5px 12px;
   text-align            : center;
-  border                : 1px solid #7D7D7D;    
+  border                : 1px solid #7d7d7d;    
   text-decoration       : none; 
 }
 .demoHead .demoNavLinks a.btn {
-  color:#FFF;
-  background: #8CC63F;
-  border: 1px solid #8CC63F;
+  color:#fff;
+  background: #8cc63f;
+  border: 1px solid #8cc63f;
 }
 .demoHead a.btn:hover{
-  background      : #EA8511;
-  color           : #FFFFFF;
-  border          : 1px solid #EA8511; 
+  background      : #ea8511;
+  color           : #fff;
+  border          : 1px solid #ea8511; 
   text-decoration : none; 
 }
 .demoHead .demoNavLinks a.btn:hover {
-  color:#5A5655;
-  background: #8CC63F;
-  border: 1px solid #5A5655;
+  color:#5a5655;
+  background: #8cc63f;
+  border: 1px solid #5a5655;
 }
 .demoHead a.selected{
   -moz-border-radius    : 5px;
   -webkit-border-radius : 5px;
-  background            : #EA8511;
-  color                 : #FFFFFF;
+  background            : #ea8511;
+  color                 : #fff;
   margin                : 2px 2px 0px 2px;
   padding               : 5px 12px 5px 12px;
   text-align            : center;
-  border                : 1px solid #EA8511;    
+  border                : 1px solid #ea8511;    
   text-decoration       : none; 
 }
