@@ -500,7 +500,7 @@ class CI_Output {
 				}
 			}
 
-			echo filter_var($output, FILTER_SANITIZE_STRING);
+			print($output);
 			log_message('info', 'Final output sent to browser');
 			log_message('debug', 'Total execution time: '.$elapsed);
 			return;
@@ -535,7 +535,7 @@ class CI_Output {
 		}
 		else
 		{
-			echo filter_var($output, FILTER_SANITIZE_STRING); // Send it to the browser!
+			print($output); // Send it to the browser!
 		}
 
 		log_message('info', 'Final output sent to browser');

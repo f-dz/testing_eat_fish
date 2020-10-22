@@ -143,13 +143,13 @@ if ( ! function_exists('force_download'))
 		// If we have raw data - just dump it
 		if ($data !== NULL)
 		{
-			exit(filter_var($data, FILTER_SANITIZE_STRING));
+			exit($data);
 		}
 
 		// Flush 1MB chunks of data
 		while ( ! feof($fp) && ($data = fread($fp, 1048576)) !== FALSE)
 		{
-			echo filter_var($data, FILTER_SANITIZE_STRING);
+			echo $data;
 		}
 
 		fclose($fp);
