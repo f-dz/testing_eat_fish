@@ -15,9 +15,9 @@
 }
 .irs-line {
     height: 10px; top: 33px;
-    background: #EEE;
-    background: linear-gradient(to bottom, #DDD -50%, #FFF 150%); /* W3C */
-    border: 1px solid #CCC;
+    background: #eee;
+    background: linear-gradient(to bottom, #ddd -50%, #fff 150%);
+    border: 1px solid #ccc;
     border-radius: 16px;
     -moz-border-radius: 16px;
 }
@@ -63,8 +63,8 @@
 .irs-slider {
     top: 25px;
     width: 27px; height: 27px;
-    border: 1px solid #AAA;
-    background: #DDD;
+    border: 1px solid #aaa;
+    background: #ddd;
     background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(220,220,220,1) 20%,rgba(255,255,255,1) 100%); /* W3C */
     border-radius: 27px;
     -moz-border-radius: 27px;
@@ -73,7 +73,7 @@
 }
 
 .irs-slider.state_hover, .irs-slider:hover {
-    background: #FFF;
+    background: #fff;
 }
 
 .irs-min, .irs-max {
