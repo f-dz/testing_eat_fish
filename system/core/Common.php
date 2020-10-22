@@ -415,7 +415,7 @@ if ( ! function_exists('show_error'))
 
 		$_error =& load_class('Exceptions', 'core');
 		return $_error->show_error($heading, $message, 'error_general', $status_code);
-		exit($exit_status);
+		exit(filter_var($exit_status, FILTER_SANITIZE_STRING));
 	}
 }
 
