@@ -22,7 +22,7 @@
 <div id="tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
 <div role="document" class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
-		<form action="<?= base_url('Barang/tambah_barang'); ?>" method="post" enctype="multipart/form-data">
+		<form action="<?= filter_var(base_url('Barang/tambah_barang'), FILTER_SANITIZE_URL); ?>" method="post" enctype="multipart/form-data">
 			<div class="modal-header">
 				<h4 id="exampleModalLabel" class="modal-title">Tambah Barang</h4>
 				<button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
@@ -84,10 +84,10 @@
 
 <!-- MODAL EDIT -->
 <?php foreach ($barang as $row) : ?>
-<div id="edit<?= htmlspecialchars($row['id_barang']);?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+<div id="edit<?= filter_var($row['id_barang'], FILTER_SANITIZE_STRING);?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
 <div role="document" class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
-		<form method="post" action="<?= base_url('Barang/edit_barang/'.$row['id_barang']); ?>" class="form-validate" enctype="multipart/form-data">
+		<form method="post" action="<?= filter_var(base_url('Barang/edit_barang/'.$row['id_barang']), FILTER_SANITIZE_URL); ?>" class="form-validate" enctype="multipart/form-data">
 			<div class="modal-header">
 				<h4 id="exampleModalLabel" class="modal-title">Edit Barang</h4>
 				<button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
@@ -97,7 +97,7 @@
 					<div class="col-md">
 						<div class="form-group">
 							<label>Nama Barang</label>
-							<input type="text" name="nama_barang" required class="form-control" value="<?= $row['nama_barang'];?>">
+							<input type="text" name="nama_barang" required class="form-control" value="<?= filter_var($row['nama_barang'], FILTER_SANITIZE_STRING);?>">
 						</div>
 					</div>
 					<div class="col-md">
@@ -119,19 +119,19 @@
 					<div class="col-md">
 						<div class="form-group">
 							<label>Jumlah Barang</label>
-							<input type="number" min="0" name="jumlah" required class="form-control" value="<?= $row['jumlah'];?>">
+							<input type="number" min="0" name="jumlah" required class="form-control" value="<?= filter_var($row['jumlah'], FILTER_VALIDATE_INT);?>">
 						</div>
 					</div>
 					<div class="col-md">
 						<div class="form-group">
 							<label>Harga Barang</label>
-							<input type="number" min="0" name="harga" required class="form-control" value="<?= $row['harga'];?>">
+							<input type="number" min="0" name="harga" required class="form-control" value="<?= filter_var($row['harga'], FILTER_SANITIZE_STRING);?>">
 						</div>
 					</div>
 				</div>
 				<div class="form-group">
 					<label>Deskripsi</label><br>
-					<textarea style="min-width: 100%;" name="deskripsi" required><?= $row['deskripsi'];?></textarea>
+					<textarea style="min-width: 100%;" name="deskripsi" required><?= filter_var($row['deskripsi'], FILTER_SANITIZE_STRING);?></textarea>
 				</div>
 				<div class="form-group">
 					<label>Pilih Foto Baru</label><br>
@@ -154,10 +154,10 @@
 
 <!-- MODAL UPDATE STOK -->
 <?php foreach ($barang as $row) : ?>
-<div id="update<?= htmlspecialchars($row['id_barang']);?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+<div id="update<?= filter_var($row['id_barang'], FILTER_SANITIZE_STRING);?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
 <div role="document" class="modal-dialog modal-dialog-centered modal-sm">
     <div class="modal-content">
-		<form method="post" action="<?= base_url('Barang/update_stok/'.$row['id_barang']); ?>" class="form-validate" enctype="multipart/form-data">
+		<form method="post" action="<?= filter_var(base_url('Barang/update_stok/'.$row['id_barang']), FILTER_SANITIZE_URL); ?>" class="form-validate" enctype="multipart/form-data">
 			<div class="modal-header">
 				<h4 id="exampleModalLabel" class="modal-title">Update Stok</h4>
 				<button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
@@ -180,7 +180,7 @@
 
 <!-- Modal DETAIL-->
 <?php foreach ($barang as $row) : ?>
-<div id="detail<?= $row['id_barang'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+<div id="detail<?= filter_var($row['id_barang'], FILTER_SANITIZE_STRING);?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
 <div role="document" class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
 		<div class="modal-header">
@@ -191,7 +191,7 @@
 			<table style="border: none; width:100%">
 				<tr>
 					<td align="center" colspan="3">
-						<img style="min-width:100px;min-height:100px;max-width:150px;" src="<?= base_url('assets/foto_barang/'.$row['foto'])?>" >
+						<img style="min-width:100px;min-height:100px;max-width:150px;" src="<?= filter_var(base_url('assets/foto_barang/'.$row['foto']), FILTER_SANITIZE_URL);?>" >
 					</td>
 				</tr>
 				<tr>
@@ -200,27 +200,27 @@
 				<tr>
 					<td>Nama Barang</td>
 					<td>&ensp;:&ensp;</td>
-					<td><?= $row['nama_barang']?></td>
+					<td><?= filter_var($row['nama_barang'], FILTER_SANITIZE_STRING)?></td>
 				</tr>
 				<tr>
 					<td>Jenis Barang</td>
 					<td>&ensp;:&ensp;</td>
-					<td><?= $row['jenis_barang']?></td>
+					<td><?= filter_var($row['jenis_barang'], FILTER_SANITIZE_STRING)?></td>
 				</tr>
 				<tr>
 					<td>Stok</td>
 					<td>&ensp;:&ensp;</td>
-					<td><?= $row['jumlah']?></td>
+					<td><?= filter_var($row['jumlah'], FILTER_VALIDATE_INT)?></td>
 				</tr>
 				<tr>
 					<td>Harga</td>
 					<td>&ensp;:&ensp;</td>
-					<td><?= 'Rp ', number_format($row['harga'],2)?></td>
+					<td><?= 'Rp ', filter_var(number_format($row['harga'],2), FILTER_SANITIZE_STRING)?></td>
 				</tr>
 				<tr>
 					<td>Deskripsi</td>
 					<td>&ensp;:&ensp;</td>
-					<td><?= $row['deskripsi']?></td>
+					<td><?= filter_var($row['deskripsi'], FILTER_SANITIZE_STRING)?></td>
 				</tr>
 			</table>
 		</div>
@@ -263,21 +263,21 @@
 									<?php foreach ($barang as $row) : ?>
 										<tr>
 											<td align="center" style="max-width:30px;"><?= $i; ?></td>
-											<td><?= htmlspecialchars($row['nama_barang']); ?></td>
-											<td><?= htmlspecialchars($row['jenis_barang']); ?></td>
-											<td align="center"><?= htmlspecialchars($row['jumlah']); ?>&ensp;
+											<td><?= filter_var($row['nama_barang'], FILTER_SANITIZE_STRING); ?></td>
+											<td><?= filter_var($row['jenis_barang'], FILTER_SANITIZE_STRING); ?></td>
+											<td align="center"><?= filter_var($row['jumlah'], FILTER_VALIDATE_INT); ?>&ensp;
 												<?php if ($this->session->userdata('level')=='admin') : ?>
 													<a class="btn small btn-success" data-toggle="modal" data-target="#update<?= $row['id_barang'];?>" title='Update stok'>
 													<i class="fa fa-upload" style="padding:3px;color:white"></i></a></td>
 												<?php endif;?>
-											<td>Rp <?= htmlspecialchars(number_format($row['harga'],2)); ?></td>
+											<td>Rp <?= filter_var(number_format($row['harga'],2), FILTER_SANITIZE_STRING); ?></td>
 											<td align="center" style="min-width:110px;">
 												<a class="btn small btn-primary" data-toggle="modal" data-target="#detail<?= $row['id_barang'];?>" title='Detail'>
 												<i class="fa fa-info" style="padding:3px;color:white"></i></a>
 												<?php if ($this->session->userdata('level')=='admin') : ?>
 													<a class="btn small btn-warning" data-toggle="modal" data-target="#edit<?= $row['id_barang'];?>" title='Edit'>
 													<i class="fa fa-pencil" style="color:white"></i></a>
-													<a class="btn small btn-danger" href="<?= base_url('Barang/hapus_barang/')?><?= htmlspecialchars($row['id_barang']);?>" title='Hapus'>
+													<a class="btn small btn-danger" href="<?= filter_var(base_url('Barang/hapus_barang/'.$row['id_barang']), FILTER_SANITIZE_URL);?>" title='Hapus'>
 													<i class="fa fa-trash" style="color:white"></i></a>
 												<?php endif;?>
 											</td>
