@@ -32,7 +32,7 @@
     .icheckbox_line-aero.hover,
     .icheckbox_line-aero.checked.hover,
     .iradio_line-aero.hover {
-        background: #B5D1D8;
+        background: #b5d1d8;
     }
     .icheckbox_line-aero.checked,
     .iradio_line-aero.checked {
@@ -44,7 +44,7 @@
         }
     .icheckbox_line-aero.disabled,
     .iradio_line-aero.disabled {
-        background: #D2E4E8;
+        background: #d2e4e8;
         cursor: default;
     }
         .icheckbox_line-aero.disabled .icheck_line-icon,
@@ -53,7 +53,7 @@
         }
     .icheckbox_line-aero.checked.disabled,
     .iradio_line-aero.checked.disabled {
-        background: #D2E4E8;
+        background: #d2e4e8;
     }
         .icheckbox_line-aero.checked.disabled .icheck_line-icon,
         .iradio_line-aero.checked.disabled .icheck_line-icon {

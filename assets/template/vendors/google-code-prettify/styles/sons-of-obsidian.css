@@ -7,43 +7,43 @@
 
 .str
 {
-    color: #EC7600;
+    color: #ec7600;
 }
 .kwd
 {
-    color: #93C763;
+    color: #93c763;
 }
 .com
 {
-    color: #66747B;
+    color: #66747b;
 }
 .typ
 {
-    color: #678CB1;
+    color: #678cb1;
 }
 .lit
 {
-    color: #FACD22;
+    color: #facd22;
 }
 .pun
 {
-    color: #F1F2F3;
+    color: #f1f2f3;
 }
 .pln
 {
-    color: #F1F2F3;
+    color: #f1f2f3;
 }
 .tag
 {
-    color: #8AC763;
+    color: #8ac763;
 }
 .atn
 {
-    color: #E0E2E4;
+    color: #e0e2e4;
 }
 .atv
 {
-    color: #EC7600;
+    color: #ec7600;
 }
 .dec
 {

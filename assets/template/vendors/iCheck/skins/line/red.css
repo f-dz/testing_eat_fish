@@ -32,7 +32,7 @@
     .icheckbox_line-red.hover,
     .icheckbox_line-red.checked.hover,
     .iradio_line-red.hover {
-        background: #E98582;
+        background: #e98582;
     }
     .icheckbox_line-red.checked,
     .iradio_line-red.checked {
@@ -44,7 +44,7 @@
         }
     .icheckbox_line-red.disabled,
     .iradio_line-red.disabled {
-        background: #F7D3D2;
+        background: #f7d3d2;
         cursor: default;
     }
         .icheckbox_line-red.disabled .icheck_line-icon,
@@ -53,7 +53,7 @@
         }
     .icheckbox_line-red.checked.disabled,
     .iradio_line-red.checked.disabled {
-        background: #F7D3D2;
+        background: #f7d3d2;
     }
         .icheckbox_line-red.checked.disabled .icheck_line-icon,
         .iradio_line-red.checked.disabled .icheck_line-icon {
