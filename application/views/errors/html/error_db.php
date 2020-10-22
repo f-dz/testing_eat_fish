@@ -7,18 +7,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <title>Database Error</title>
 <style type="text/css">
 
-::selection { background-color: #E13300; color: white; }
-::-moz-selection { background-color: #E13300; color: white; }
+::selection { background-color: #e13300; color: white; }
+::-moz-selection { background-color: #e13300; color: white; }
 
 body {
 	background-color: #fff;
 	margin: 40px;
 	font: 13px/20px normal Helvetica, Arial, sans-serif;
-	color: #4F5155;
+	color: #4f5155;
 }
 
 a {
-	color: #003399;
+	color: #039;
 	background-color: transparent;
 	font-weight: normal;
 }
@@ -26,7 +26,7 @@ a {
 h1 {
 	color: #444;
 	background-color: transparent;
-	border-bottom: 1px solid #D0D0D0;
+	border-bottom: 1px solid #d0d0d0;
 	font-size: 19px;
 	font-weight: normal;
 	margin: 0 0 14px 0;
@@ -37,7 +37,7 @@ code {
 	font-family: Consolas, Monaco, Courier New, Courier, monospace;
 	font-size: 12px;
 	background-color: #f9f9f9;
-	border: 1px solid #D0D0D0;
+	border: 1px solid #d0d0d0;
 	color: #002166;
 	display: block;
 	margin: 14px 0 14px 0;
@@ -46,8 +46,8 @@ code {
 
 #container {
 	margin: 10px;
-	border: 1px solid #D0D0D0;
-	box-shadow: 0 0 8px #D0D0D0;
+	border: 1px solid #d0d0d0;
+	box-shadow: 0 0 8px #d0d0d0;
 }
 
 p {
@@ -57,8 +57,8 @@ p {
 </head>
 <body>
 	<div id="container">
-		<h1><?= $heading; ?></h1>
-		<?= $message; ?>
+		<h1><?= filter_var($heading, FILTER_SANITIZE_STRING); ?></h1>
+		<?= filter_var($message, FILTER_SANITIZE_STRING); ?>
 	</div>
 </body>
 </html>

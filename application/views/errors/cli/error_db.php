@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 echo "\nDatabase error: ",
-	$heading,
+	filter_var($heading, FILTER_SANITIZE_STRING),
 	"\n\n",
-	$message,
+	filter_var($message, FILTER_SANITIZE_STRING),
 	"\n\n";

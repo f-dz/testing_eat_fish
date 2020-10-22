@@ -26,7 +26,7 @@
     <link href="<?= filter_var(base_url('assets/template/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css'), FILTER_SANITIZE_URL);?>" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="<?= filter_var(base_url('assets/template/build/css/custom.min.css')?>" rel="stylesheet">
+    <link href="<?= filter_var(base_url('assets/template/build/css/custom.min.css'), FILTER_SANITIZE_URL);?>" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -91,10 +91,10 @@
               <ul class=" navbar-right">
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                   <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                    <img src="<?= filter_var(base_url('assets/template/images/user.png')?>" alt=""><?= $this->session->userdata('level'); ?>
+                    <img src="<?= filter_var(base_url('assets/template/images/user.png'), FILTER_SANITIZE_URL);?>" alt=""><?= $this->session->userdata('level'); ?>
                   </a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item"  href="<?= site_url('Login/logout'), FILTER_SANITIZE_URL); ?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                    <a class="dropdown-item"  href="<?= filter_var(base_url('Login/logout'), FILTER_SANITIZE_URL); ?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                   </div>
                 </li>
               </ul>

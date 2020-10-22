@@ -2,19 +2,19 @@
 
 An uncaught Exception was encountered
 
-Type:        <?= get_class($exception), "\n"; ?>
-Message:     <?= $message, "\n"; ?>
-Filename:    <?= $exception->getFile(), "\n"; ?>
-Line Number: <?= $exception->getLine(); ?>
+Type:        <?= filter_var(get_class($exception), FILTER_SANITIZE_STRING), "\n"; ?>
+Message:     <?= filter_var($message, FILTER_SANITIZE_STRING), "\n"; ?>
+Filename:    <?= filter_var($exception->getFile(), FILTER_SANITIZE_STRING), "\n"; ?>
+Line Number: <?= filter_var($exception->getLine(), FILTER_SANITIZE_STRING); ?>
 
 <?php if (defined('SHOW_DEBUG_BACKTRACE') && SHOW_DEBUG_BACKTRACE === TRUE): ?>
 
 Backtrace:
 <?php	foreach ($exception->getTrace() as $error): ?>
 <?php		if (isset($error['file']) && strpos($error['file'], realpath(BASEPATH)) !== 0): ?>
-	File: <?= $error['file'], "\n"; ?>
-	Line: <?= $error['line'], "\n"; ?>
-	Function: <?= $error['function'], "\n\n"; ?>
+	File: <?= filter_var($error['file'], FILTER_SANITIZE_STRING), "\n"; ?>
+	Line: <?= filter_var($error['line'], FILTER_SANITIZE_STRING), "\n"; ?>
+	Function: <?= filter_var($error['function'], FILTER_SANITIZE_STRING), "\n\n"; ?>
 <?php		endif ?>
 <?php	endforeach ?>
 
