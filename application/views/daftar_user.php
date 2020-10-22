@@ -14,7 +14,7 @@
 <div id="tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
 <div role="document" class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-		<form method="post" action="<?= base_url('User/tambah_user'); ?>" class="form-validate">
+		<form method="post" action="<?= filter_var(base_url('User/tambah_user'), FILTER_SANITIZE_URL); ?>" class="form-validate">
 			<div class="modal-header">
 				<h4 id="exampleModalLabel" class="modal-title">Tambah User</h4>
 				<button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
@@ -48,10 +48,10 @@
 
 <!-- MODAL EDIT -->
 <?php foreach ($user as $row) : ?>
-<div id="edit<?= htmlspecialchars($row['id_user']);?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+<div id="edit<?= filter_var($row['id_user'], FILTER_SANITIZE_STRING);?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
 <div role="document" class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-		<form method="post" action="<?= base_url('User/edit_user/'.$row['id_user']); ?>" class="form-validate">
+		<form method="post" action="<?= filter_var(base_url('User/edit_user/'.$row['id_user']),FILTER_SANITIZE_URL); ?>" class="form-validate">
 			<div class="modal-header">
 				<h4 id="exampleModalLabel" class="modal-title">Edit User</h4>
 				<button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
@@ -59,16 +59,16 @@
 			<div class="modal-body">
                 <div class="form-group">
                     <label>Username</label>
-                    <input type="text" name="username" required class="form-control" value="<?= $row['username'];?>">
+                    <input type="text" name="username" required class="form-control" value="<?= filter_var($row['username'], FILTER_SANITIZE_STRING);?>">
                 </div>
                 <div class="form-group">
                     <label>Password</label>
-                    <input type="password" name="password" required class="form-control" value="<?= $row['password'];?>">
+                    <input type="password" name="password" required class="form-control" value="<?= filter_var($row['password'], FILTER_SANITIZE_STRING);?>">
                 </div>
                 <div class="form-group">
                     <label>Level</label>
                     <select name="level" class="form-control">
-                        <?php if ($row['level']=="Admin") : ?>
+                        <?php if ($row['level']=="admin") : ?>
                             <option value="admin" selected>Admin</option>
                             <option value="manager">Manager</option>
                         <?php else : ?>
@@ -116,13 +116,13 @@
 									<?php foreach ($user as $row) : ?>
 										<tr>
 											<td align="center" style="max-width:30px;"><?= $i; ?></td>
-											<td><?= htmlspecialchars($row['username']); ?></td>
-											<td><?= htmlspecialchars($row['password']); ?></td>
-											<td><?= htmlspecialchars($row['level']); ?></td>
+											<td><?= filter_var($row['username'], FILTER_SANITIZE_STRING); ?></td>
+											<td><?= filter_var($row['password'], FILTER_SANITIZE_STRING); ?></td>
+											<td><?= filter_var($row['level'], FILTER_SANITIZE_STRING); ?></td>
 											<td style="min-width:150px;" align="center">
-                                                <a class="btn small btn-warning" data-toggle="modal" data-target="#edit<?= $row['id_user'];?>" title='Edit'>
+                                                <a class="btn small btn-warning" data-toggle="modal" data-target="#edit<?= filter_var($row['id_user'], FILTER_SANITIZE_STRING);?>" title='Edit'>
                                                 &ensp;<i class="fa fa-pencil" style="color:white">&ensp;Edit</i>&ensp;</a>&ensp;
-                                                <a  class="btn small btn-danger" href="<?= base_url('User/hapus_user/')?><?= htmlspecialchars($row['id_user']);?>" title='Hapus'>
+                                                <a  class="btn small btn-danger" href="<?= filter_var(base_url('User/hapus_user/'), FILTER_SANITIZE_URL);?><?= filter_var($row['id_user'], FILTER_SANITIZE_STRING);?>" title='Hapus'>
                                                 &ensp;<i class="fa fa-trash" style="color:white">&ensp;Hapus</i>&ensp;</a>
 											</td>
 											<?php $i++;?>
