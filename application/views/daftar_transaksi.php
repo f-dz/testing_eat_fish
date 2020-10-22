@@ -35,15 +35,15 @@
 									<?php $i=1; ?>
 									<?php foreach ($transaksi as $row) : ?>
 										<tr>
-											<td align="center" style="max-width:30px;"><?= $i; ?></td>
-											<td><?= htmlspecialchars($row['nama_pembeli']); ?></td>
-											<td>Rp <?= htmlspecialchars(number_format($row['total_harga'],2)); ?></td>
-											<td align="center"><?= date("H:i:s", strtotime($row['jam']))?></td>
-											<td align="center"><?= date("d-m-Y", strtotime($row['tanggal']))?></td>
-                                            <td align="center"><?= $row['status'];?>&ensp;
+											<td align="center" style="max-width:30px;"><?= filter_var($i, FILTER_VALIDATE_INT); ?></td>
+											<td><?= filter_var($row['nama_pembeli'], FILTER_SANITIZE_STRING); ?></td>
+											<td>Rp <?= filter_var(number_format($row['total_harga'],2), FILTER_SANITIZE_STRING); ?></td>
+											<td align="center"><?= filter_var(date("H:i:s", strtotime($row['jam'])), FILTER_SANITIZE_STRING);?></td>
+											<td align="center"><?= filter_var(date("d-m-Y", strtotime($row['tanggal'])), FILTER_SANITIZE_STRING);?></td>
+                                            <td align="center"><?= filter_var($row['status'], FILTER_SANITIZE_STRING);?>&ensp;
                                                 <?php if ($this->session->userdata('level')=='admin') : 
                                                     if ($row['status']=='Proses') : ?>
-                                                    <a class="btn small btn-success" href="<?= base_url('Transaksi/update_status/'.$row['id_transaksi'])?>" title='Update status'>
+                                                    <a class="btn small btn-success" href="<?= filter_var(base_url('Transaksi/update_status/'.$row['id_transaksi']), FILTER_SANITIZE_URL)?>" title='Update status'>
                                                     <i class="fa fa-upload" style="padding:3px;color:white"></i></a>
                                                 <?php endif; endif;?>
                                             </td>

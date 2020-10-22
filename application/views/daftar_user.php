@@ -115,7 +115,7 @@
 									<?php $i=1; ?>
 									<?php foreach ($user as $row) : ?>
 										<tr>
-											<td align="center" style="max-width:30px;"><?= $i; ?></td>
+											<td align="center" style="max-width:30px;"><?= filter_var($i, FILTER_VALIDATE_INT); ?></td>
 											<td><?= filter_var($row['username'], FILTER_SANITIZE_STRING); ?></td>
 											<td><?= filter_var($row['password'], FILTER_SANITIZE_STRING); ?></td>
 											<td><?= filter_var($row['level'], FILTER_SANITIZE_STRING); ?></td>
