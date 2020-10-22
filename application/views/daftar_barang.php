@@ -262,20 +262,20 @@
 									<?php $i=1; ?>
 									<?php foreach ($barang as $row) : ?>
 										<tr>
-											<td align="center" style="max-width:30px;"><?= $i; ?></td>
+											<td align="center" style="max-width:30px;"><?= filter_var($i, FILTER_VALIDATE_INT); ?></td>
 											<td><?= filter_var($row['nama_barang'], FILTER_SANITIZE_STRING); ?></td>
 											<td><?= filter_var($row['jenis_barang'], FILTER_SANITIZE_STRING); ?></td>
 											<td align="center"><?= filter_var($row['jumlah'], FILTER_VALIDATE_INT); ?>&ensp;
 												<?php if ($this->session->userdata('level')=='admin') : ?>
-													<a class="btn small btn-success" data-toggle="modal" data-target="#update<?= $row['id_barang'];?>" title='Update stok'>
+													<a class="btn small btn-success" data-toggle="modal" data-target="#update<?= filter_var($row['id_barang'], FILTER_SANITIZE_STRING);?>" title='Update stok'>
 													<i class="fa fa-upload" style="padding:3px;color:white"></i></a></td>
 												<?php endif;?>
 											<td>Rp <?= filter_var(number_format($row['harga'],2), FILTER_SANITIZE_STRING); ?></td>
 											<td align="center" style="min-width:110px;">
-												<a class="btn small btn-primary" data-toggle="modal" data-target="#detail<?= $row['id_barang'];?>" title='Detail'>
+												<a class="btn small btn-primary" data-toggle="modal" data-target="#detail<?= filter_var($row['id_barang'], FILTER_SANITIZE_STRING);?>" title='Detail'>
 												<i class="fa fa-info" style="padding:3px;color:white"></i></a>
 												<?php if ($this->session->userdata('level')=='admin') : ?>
-													<a class="btn small btn-warning" data-toggle="modal" data-target="#edit<?= $row['id_barang'];?>" title='Edit'>
+													<a class="btn small btn-warning" data-toggle="modal" data-target="#edit<?= filter_var($row['id_barang'], FILTER_SANITIZE_STRING);?>" title='Edit'>
 													<i class="fa fa-pencil" style="color:white"></i></a>
 													<a class="btn small btn-danger" href="<?= filter_var(base_url('Barang/hapus_barang/'.$row['id_barang']), FILTER_SANITIZE_URL);?>" title='Hapus'>
 													<i class="fa fa-trash" style="color:white"></i></a>

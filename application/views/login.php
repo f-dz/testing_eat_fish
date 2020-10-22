@@ -4,7 +4,7 @@
       <div class="animate form login_form">
         <section class="login_content">
           
-          <form method="post" action="<?= base_url('Login/auth'); ?>">
+          <form method="post" action="<?= filter_var(base_url('Login/auth'), FILTER_SANITIZE_URL); ?>">
             <h1>Login Form</h1>
             <div>
               <input id="username" type="text" name="username" class="form-control" placeholder="Username" required="Masukkan Username!" />
